@@ -1,0 +1,21 @@
+Nhut Trinh
+
+This program is written in java language.
+In order to run, type "make" to run the executable file.
+
+This program takes input arguments to protect the access of the house.
+Only users with an authorized key can enter the house. To enter the house, the user must first put their key in the lock, then turn the lock, then enter the house, only if the key is valid. A house can be rekeyed with new keys only by the owner, and only if the owner is inside the house.
+Firefighters can enter with the secret key (literal string) FIREFIGHTER_SECRET_KEY.
+The lock will always be accessed in the following way: insert key, turn the lock, then enter the house (it is not guaranteed that it is the same user, however). Other commands can be issued in between insert, turn, and enter, however they do not affect the lock state.
+./secure_house <owner_name> <key_1> <key_2> ... <key_n>
+where <owner_name> is the name of the owner, and <key_1> through <key_n> are all authorized keys for the house.
+All inputs to the program (keys and names) will be [a-zA-Z0-9_\-] (alphanumeric, underscore, and dash). All matching is case-sensitive.
+
+Commands:
+INSERT KEY <user_name> <key>
+TURN KEY <user_name>
+ENTER HOUSE <user_name>
+WHO'S INSIDE?
+CHANGE LOCKS <user_name> <key_1> <key_2> ... <key_n>
+LEAVE HOUSE <user_name>
+
